@@ -1,11 +1,20 @@
 # turbo-boost-disable
 
-## Keep Out
+## Disclaimer
 
-This tool is **only a shell wrapper abusing system privilages** to wrap [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) functionality behind the command line. You're probably better off using TBS to be honest. 
+**This project is END-OF-LIFE.**
+This issue does not affect Apple Silicon Macs: as I no longer own an Intel Mac, I cannot guarantee the project works.
+If you would like continue development, please fork.
+
+This tool is **only a shell wrapper abusing system privilages** to wrap [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) functionality behind the command line. 
+You're probably better off using TBS to be honest.
+
+This issue only affects Intel Macs.
+If you're using an Apple Silicon based Mac, you are free from overheating by design!
+Additionally, the kext shown here will only work on Intel-based Macs.
 
 ## Why?
-My 2018 MacBook Pro runs hot most of the time. 
+My 2018 Intel MacBook Pro runs hot most of the time. 
 It's well known that integrated circuits last longer if they are not stressed out as much during their life.
 That means (relatively) cool operation most of the time. 
 Typing on a warm keyboard is also a deeply unpleasent experience.
@@ -23,6 +32,11 @@ This is just a shell wrapper around a kext to disable Turbo Boost on 64-bit macO
 
 We have to use the direct TBS kext because for some reason, their kext can run on macOS, but we cannot sign our own version to work on macOS. They must have signed it with an Apple key or something?
 Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take the core kext, which is directly enabled/disabled with the shell scripts in this repo. Enjoy!
+
+### git branch
+
+The primary `git` branch is `main`.
+Make sure you are working off this correct branch.
 
 ## 1. Setup (Required)
 
